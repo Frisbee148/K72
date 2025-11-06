@@ -1,9 +1,17 @@
 import React from "react";
-
+import { Route,Routes } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Agency from "./pages/Agency.jsx";
+import Projects from "./pages/Projects.jsx";
 const App = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-6xl text-white font-bold">Hello, World!</h1>
+    <div className="text-white">
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path='/agency' element={<Agency/>} />
+        <Route path='/projects' element={<Projects/>} />
+
+      </Routes>
     </div>
   );
 };
